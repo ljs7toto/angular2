@@ -1,0 +1,47 @@
+텍스트입니다. 
+
+<script src="./test.js"></script>
+<script src="./person.js"></script>
+
+<input type="text" name="cnt" id="cnt">
+<input type="button" id="cntBnt" value="생성" onclick="makeTable()">
+<div id="result_div"> </div>
+
+<script>
+//    var t = new Test(); //메모리를 새로 생성 
+//    t.alertStr("a","b");
+//    t.plus(); //오류가 남
+   var p = new Person("이지수",27,"여자","서울" );
+   p.writePersonInfo();
+   p.setName("테스트");
+   p.writePersonInfo();  
+   p.play = function(){
+       alert("놀고 있네요");
+   }
+   p.play();
+   
+   function makeTable(){
+       var cntObj = document.getElementById("cnt");
+       var count = new Number(cntObj.value);
+       var str = "<table border='1'>";
+       for(var i=1; i<=count; i++){
+            str += "<tr>";
+             for(var j=1; j<=count; j++){   
+                str += "<td>" + (((i-1) *2) + j) +"</td>";
+             }
+            str += "</tr>";
+       }
+       str += "</table>"
+       document.getElementById("result_div").innerHTML = str;
+   }
+//    p.name = "이름이 바뀌나?";
+//    p.alertName();
+
+//    // 호이스트 - 갇쳐있지 않기때문에 4가 나옴
+//    var a = 3;
+//    {
+//        var a = 4;
+//    }
+//    alert(a);
+
+</script>
