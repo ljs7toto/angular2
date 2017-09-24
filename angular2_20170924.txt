@@ -1,0 +1,36 @@
+GIT 사용법 
+
+비쥬얼 스튜디오에서 소스제어 아이콘 누르고
+불러오기 올릴폴더..=> 머시기 눌러서 
+
+git 다운 받고 
+vs code에서 사용자 설정
+git.autofetch
+files.exclude 에 "**/.vscode": true 추가
+
+git init
+
+ => Reinitialized existing Git repository in D:/js/works/test01/.git/
+
+git remote add origin https://github.com/ljs7toto/angular2.git
+(주소는 나의 git에서 복사해서 넣기)
+
+체크 아이콘 누르고 commit 
+
+오류 나면 아래처럼 
+git config --global user.name ljs7toto
+git config --global user.email ljs7toto@naver.com
+
+내용이 없어지면
+git push -u origin master
+
+로그인
+
+
+---------------------------------------------------------------------------------------------------------------
+
+npm install -g angular
+
+
+
+ParkKyoungHun/ang2
